@@ -32,7 +32,7 @@ let addressescsv = [
 	//'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv', //iptest测速结果文件。
 ];
 
-let subconverter = "psub.elevenfamilies.link"; //在线订阅转换后端，目前使用CM的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
+let subconverter = "psub.alianmsnqq.workers.dev"; //在线订阅转换后端，目前使用CM的订阅转换功能。支持自建psub 可自行搭建https://github.com/bulianglin/psub
 let subconfig = "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"; //订阅转换配置文件
 let noTLS = 'false'; //改为 true , 将不做域名判断 始终返回noTLS节点
 let link = '';
@@ -56,7 +56,7 @@ let EndPS = '';//节点名备注内容
 let 协议类型 = 'VLESS';
 let FileName = 'WorkerVless2sub';
 let SUBUpdateTime = 6; 
-let total = 99;//PB
+let total = 99999;//PB
 //let timestamp = now;
 let timestamp = 4102329600000;//2099-12-31
 const regex = /^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|\[.*\]):?(\d+)?#?(.*)?$/;
