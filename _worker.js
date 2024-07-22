@@ -438,9 +438,9 @@ export default {
 				},
 			});
 		} else if ( (userAgent.includes('clash') || (format === 'clash' && !userAgent.includes('subconverter')) ) && !userAgent.includes('nekobox') && !userAgent.includes('cf-workers-sub')) {
-			subconverterUrl = `https://${subconverter}/sub?target=clash&url=${encodeURIComponent(subconverterUrl)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
+			subconverterUrl = `https://${subconverter}/sub?target=clash&url=${encodeURIComponent(subconverterUrl)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=true&tfo=false&scv=true&fdn=false&sort=false&new_name=true&udp=true`;
 		} else if ( (userAgent.includes('sing-box') || userAgent.includes('singbox') || (format === 'singbox' && !userAgent.includes('subconverter')) ) && !userAgent.includes('cf-workers-sub')){
-			subconverterUrl = `https://${subconverter}/sub?target=singbox&url=${encodeURIComponent(subconverterUrl)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
+			subconverterUrl = `https://${subconverter}/sub?target=singbox&url=${encodeURIComponent(subconverterUrl)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=true&tfo=false&scv=true&fdn=false&sort=false&new_name=true&udp=true`;
 		} else {
 			if(host.includes('workers.dev') || host.includes('pages.dev')) {
 				if (proxyhostsURL) {
@@ -553,7 +553,7 @@ export default {
 						}
 					}
 
-					const vlessLink = `vless://${uuid}@${address}:${port}?encryption=none&security=&type=${type}&host=${host}&path=${encodeURIComponent(path)}#${encodeURIComponent(addressid + EndPS)}`;
+					const vlessLink = `vless://${uuid}@${address}:${port}?encryption=none&allowlnsecure=false&security=&type=${type}&host=${host}&path=${encodeURIComponent(path)}#${encodeURIComponent(addressid + EndPS)}`;
 			
 					return vlessLink;
 
@@ -642,11 +642,11 @@ export default {
 				}
 
 				if (协议类型 == 'Trojan'){
-					const trojanLink = `trojan://${uuid}@${address}:${port}?security=tls&allowlnsecure=false&sni=${sni}&alpn=h3&fp=randomized&type=${type}&host=${伪装域名}&path=${encodeURIComponent(最终路径)}#${encodeURIComponent(addressid + 节点备注)}`;
+					const trojanLink = `trojan://${uuid}@${address}:${port}?security=tls&sni=${sni}&alpn=h3&fp=randomized&type=${type}&host=${伪装域名}&path=${encodeURIComponent(最终路径)}#${encodeURIComponent(addressid + 节点备注)}`;
 
 					return trojanLink;
 				} else {
-					const vlessLink = `vless://${uuid}@${address}:${port}?encryption=none&security=tls&allowlnsecure=false&sni=${sni}&alpn=h3&fp=random&type=${type}&host=${伪装域名}&path=${encodeURIComponent(最终路径)}#${encodeURIComponent(addressid + 节点备注)}`;
+					const vlessLink = `vless://${uuid}@${address}:${port}?encryption=none&security=tls&sni=${sni}&alpn=h3&fp=random&type=${type}&host=${伪装域名}&path=${encodeURIComponent(最终路径)}#${encodeURIComponent(addressid + 节点备注)}`;
 			
 					return vlessLink;
 				}
